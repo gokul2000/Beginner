@@ -1,0 +1,20 @@
+fun main(args: Array<String>) {
+    var list = listOf<Char>('1','2','m','a','d','a','m','2','1')
+    var list2= listOf<Char>('1','3','m','x','d','x','m','3','1')
+    println(list.size)
+    println(list.count { x->x.isDigit() })
+    println(list.contains('a'))
+    println(list.containsAll(listOf('a','2','m')))
+    println(list.get(1))
+    println(list.indexOf('m'))
+    println(list.isEmpty())
+    println(list.lastIndexOf('m'))
+    println(list.subList(0,3))
+    for(k in list.indices) print(list.get(k)+" ")
+    println()
+    println(list.all { x->x.isDigit() })
+    println(list.any {x->x.isDigit()})
+    println(list.asReversed())
+    println(list.associate { x-> Pair(x,list.count({y->y==x})) })
+
+}
